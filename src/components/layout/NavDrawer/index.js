@@ -34,9 +34,17 @@ const NavDrawer = ({ handleDrawerToggle, mobileOpen }) => {
 
     const drawer = (
         <div>
-            <div className={classes.toolbar} />
-            <Divider />
-            <List>
+            <div
+                className={
+                    classes.toolbar + " " + classes.centeredTextContainer
+                }
+            >
+                <Typography className={classes.centeredTextChild}>
+                    by The Beamanator
+                </Typography>
+            </div>
+            <Divider className={classes.vertMargin} />
+            <List style={{ backgroundColor: "white" }}>
                 {[
                     {
                         Icon: HomeIcon,

@@ -14,6 +14,17 @@ const styles = (theme) => ({
         width: NAV_DRAWER_WIDTH,
     },
     toolbar: theme.mixins.toolbar,
+    vertMargin: {
+        marginTop: 1,
+    },
+    centeredTextContainer: {
+        display: "flex",
+        alignItems: "center",
+        textAlign: "center",
+    },
+    centeredTextChild: {
+        flex: 1,
+    },
 });
 
 export default styles;
