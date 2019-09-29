@@ -1,8 +1,8 @@
 # Campaign List
 
-by the Beamanator
+by The Beamanator
 
-# How to add campaign(s)
+## How to add campaign(s)
 
 1. Open the console
 2. ...
