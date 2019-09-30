@@ -34,7 +34,7 @@ export default [
         },
     },
     {
-        name: "Budget",
+        name: "budget",
         label: "Budget",
         options: {
             customBodyRender: budgetFormat,

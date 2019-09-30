@@ -57,7 +57,7 @@ const DateFilter = ({ onFilter, onClearFilter }) => {
                     />
                 </Grid>
 
-                {/* filter button */}
+                {/* filter & clear filter buttons */}
                 <Grid item>
                     <FilterActions onClearFilter={onClearFilter} />
                 </Grid>

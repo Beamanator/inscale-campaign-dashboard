@@ -1,0 +1,5 @@
+// campaignActions.js
+export const CAMPAIGN_ADD = "CAMPAIGN_ADD";
+export const CAMPAIGN_ADD_ERROR = "CAMPAIGN_ADD_ERROR";
+export const CAMPAIGN_CLEAR_ERROR = "CAMPAIGN_CLEAR_ERROR";
+export const CAMPAIGN_REMOVE = "CAMPAIGN_REMOVE";

@@ -1,6 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { connect } from "react-redux";
+import * as actions from "../../store/actions";
 import moment from "moment";
-// import PropTypes from "prop-types";
+import PropTypes from "prop-types";
 
 //  table information
 import MUIDataTable from "mui-datatables";
@@ -10,50 +12,18 @@ import columns from "./columns.js";
 // import Paper from "@material-ui/core/Paper";
 // import Typography from "@material-ui/core/Typography";
 
-// table json data
-import rawData from "./data.json";
-
 // styles
 import styles from "./styles";
 import { makeStyles } from "@material-ui/styles";
 import DateFilter from "./DateFilter";
 
-const validateData = (data = []) =>
-    data.filter(({ startDate, endDate }) => {
-        // remove campaigns with not enough data
-        if (!startDate || !endDate) return false;
-
-        return moment(startDate, "MM/DD/YYYY").isBefore(
-            moment(endDate, "MM/DD/YYYY")
-        );
-    });
-
-const processData = (data = []) =>
-    data.map((elem) => {
-        // consider campaign as "active" is end date is AFTER now
-        // -> and start date is BEFORE now
-        const isActive =
-            moment(elem.endDate, "MM/DD/YYYY").isAfter(moment()) &&
-            moment(elem.startDate, "MM/DD/YYYY").isBefore(moment());
-
-        return {
-            ...elem,
-            active: isActive,
-        };
-    });
-
-const Home = () => {
-    // clean data with initial data validation
-    const cleanData = validateData(rawData);
-
-    // process data in any way necessary
-    const processedData = processData(cleanData);
-
-    // TODO: leave some kind of open function to add data to table from console!
-
-    const [data, setData] = useState(processedData);
-
+const Home = ({ campaigns, campaignRemove }) => {
     const classes = makeStyles(styles)();
+    const [data, setData] = useState(campaigns);
+
+    useEffect(() => {
+        setData(campaigns);
+    }, [campaigns]);
 
     const onFilter = ({ startDate, endDate }) => {
         // docs for 'isBetween': https://momentjs.com/docs/#/query/is-between/
@@ -90,6 +60,14 @@ const Home = () => {
         console.log("clear filter somehow");
     };
 
+    const deleteRows = ({ data: dataBeingDeleted }) => {
+        // only 1 row can be selected at a time, so get that row's index in
+        // -> main data array w/ dataIndex
+        const rowIndex = dataBeingDeleted[0].dataIndex;
+
+        campaignRemove(rowIndex, data);
+    };
+
     return (
         <>
             <DateFilter onFilter={onFilter} onClearFilter={onClearFilter} />
@@ -100,6 +78,7 @@ const Home = () => {
                 data={data}
                 columns={columns}
                 options={{
+                    onRowsDelete: deleteRows,
                     print: false,
                     responsive: "scrollFullHeight",
                     selectableRows: "single",
@@ -111,6 +90,21 @@ const Home = () => {
     );
 };
 
-Home.propTypes = {};
+Home.propTypes = {
+    campaigns: PropTypes.array.isRequired,
+    campaignRemove: PropTypes.func.isRequired,
+};
 
-export default Home;
+const mapStateToProps = (state) => ({
+    campaigns: state.campaigns.campaigns,
+});
+
+const mapDispatchToProps = (dispatch) => ({
+    campaignRemove: (rowIndex, allAata) =>
+        dispatch(actions.campaignRemove(rowIndex, allAata)),
+});
+
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(Home);

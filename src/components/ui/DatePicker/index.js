@@ -19,9 +19,6 @@ const CustomDatePicker = ({
 }) => {
     const [open, setOpen] = useState(false);
 
-    // Possible Improvements:
-    // 1) Allow different date formats
-    // 2) Allow different icon / different icon position
     return (
         <DatePicker
             autoOk

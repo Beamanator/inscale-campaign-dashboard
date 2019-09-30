@@ -1,7 +1,6 @@
 import React from "react";
-// import PropTypes from "prop-types";
 import { withRouter } from "react-router";
-// import { Link } from "react-router-dom";
+// import PropTypes from "prop-types";
 
 // @material-ui/core
 import IconButton from "@material-ui/core/IconButton";
@@ -14,12 +13,14 @@ import CodeIcon from "@material-ui/icons/Code";
 import styles from "./styles";
 import { makeStyles } from "@material-ui/styles";
 
-const RightLinks = ({ history }) => {
+const RightLinks = () => {
     const classes = makeStyles(styles);
 
     const handleOpenGithub = () => {
-        console.error("ADD HERE BBYYY");
-        window.open("https://github.com/Beamanator", "_blank");
+        window.open(
+            "https://github.com/Beamanator/inscale-campaign-dashboard",
+            "_blank"
+        );
     };
 
     return (
