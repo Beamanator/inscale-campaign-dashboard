@@ -39,5 +39,5 @@ export const budgetFormat = (num) => {
 
 // format date into nicer, human-readable format
 export const dateFormat = (date) => {
-    return moment(date).format("MMM Do YYYY");
+    return moment(date, "MM/DD/YYYY").format("MMM Do, YYYY");
 };
