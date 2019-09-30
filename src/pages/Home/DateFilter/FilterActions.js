@@ -15,7 +15,11 @@ const FilterActions = ({ onClearFilter }) => {
 
             {/* clear filter */}
             <Grid item>
-                <Button variant="contained" color="secondary">
+                <Button
+                    onClick={onClearFilter}
+                    variant="contained"
+                    color="secondary"
+                >
                     Clear
                 </Button>
             </Grid>

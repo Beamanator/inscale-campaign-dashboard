@@ -6,7 +6,7 @@ import PropTypes from "prop-types";
 
 //  table information
 import MUIDataTable from "mui-datatables";
-import columns from "./columns.js";
+import { columns } from "../../utils/dataTableConfig";
 
 // @material-ui/core
 // import Paper from "@material-ui/core/Paper";
@@ -38,7 +38,8 @@ const Home = ({ campaigns, campaignRemove }) => {
             // check if end date is in range
             // -> note: after start, but before or equal to end
             const endDateInRange = moment(item.endDate, "MM/DD/YYYY").isBetween(
-                moment(startDate, endDate),
+                moment(startDate),
+                moment(endDate),
                 null,
                 "(]"
             );
@@ -49,15 +50,15 @@ const Home = ({ campaigns, campaignRemove }) => {
             // -> range. I didn't include this here because it wasn't in the
             // -> prompt, but it would be useful in a real-world app (I believe).
 
-            return startDateInRange && endDateInRange;
+            return startDateInRange || endDateInRange;
         });
 
         setData(sortedData);
     };
 
     const onClearFilter = () => {
-        // TODO:
-        console.log("clear filter somehow");
+        // set data with original dataset
+        setData(campaigns);
     };
 
     const deleteRows = ({ data: dataBeingDeleted }) => {
