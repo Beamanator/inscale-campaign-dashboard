@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import { NavLink } from "react-router-dom";
 
@@ -12,19 +12,19 @@ import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
 import Typography from "@material-ui/core/Typography";
-import Grid from "@material-ui/core/Grid";
+// import Grid from "@material-ui/core/Grid";
 
 // @material-ui/icons
-import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
+// import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import HomeIcon from "@material-ui/icons/Home";
-import InsertChartIcon from "@material-ui/icons/InsertChart";
-import RemoveRedEyeIcon from "@material-ui/icons/RemoveRedEye";
-import PersonAddIcon from "@material-ui/icons/PersonAdd";
+// import InsertChartIcon from "@material-ui/icons/InsertChart";
+// import RemoveRedEyeIcon from "@material-ui/icons/RemoveRedEye";
+// import PersonAddIcon from "@material-ui/icons/PersonAdd";
 import UsersIcon from "@material-ui/icons/Face";
-import TeamsIcon from "@material-ui/icons/People";
-import RolesIcon from "@material-ui/icons/FormatListBulleted";
-import SettingsIcon from "@material-ui/icons/Settings";
-import DirectionsWalkIcon from "@material-ui/icons/DirectionsWalk";
+// import TeamsIcon from "@material-ui/icons/People";
+// import RolesIcon from "@material-ui/icons/FormatListBulleted";
+// import SettingsIcon from "@material-ui/icons/Settings";
+// import DirectionsWalkIcon from "@material-ui/icons/DirectionsWalk";
 
 // styles
 import styles from "./styles";

@@ -7,7 +7,6 @@ import { makeStyles } from "@material-ui/styles";
 
 // @material-ui/core
 import AppBar from "@material-ui/core/AppBar";
-import Menu from "@material-ui/core/Menu";
 import Toolbar from "@material-ui/core/Toolbar";
 
 // components
