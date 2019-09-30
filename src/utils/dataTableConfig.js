@@ -1,10 +1,6 @@
-import {
-    activeStatus,
-    budgetFormat,
-    dateFormat,
-} from "../../utils/columnRenderFns";
+import { activeStatus, budgetFormat, dateFormat } from "./columnRenderFns";
 
-export default [
+export const columns = [
     {
         name: "id",
         options: {
