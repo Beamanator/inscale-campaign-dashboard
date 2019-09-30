@@ -2,7 +2,20 @@
 
 by The Beamanator
 
-## How to add campaign(s)
+## How to filter campaigns in table:
+
+1. Enter a valid start & end date
+2. Click 'filter'
+
+To remove filter and see old data, just click 'clear'
+
+**Note to interviewers**: The exact conditions in the prompt only mention:
+- If the campaign has a startDate that is contained in the range, it should show
+- If the campaign has an endDate that is contained in the range, it should show.
+
+These two conditions don't cover the condition if some data point has a start date **before** the range _AND_ an end date **after** the range. I think it would make sense to show such data points (in a real application), but I didn't include this condition in this project because I wanted to follow the prompt as closely as possible.
+
+## How to add a campaign
 
 1. Open the console
 2. Execute function `campaignAdd()`
