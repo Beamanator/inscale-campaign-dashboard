@@ -18,7 +18,7 @@ const Four04 = () => {
     const classes = makeStyles(styles)();
 
     useEffect(() => {
-        document.title = "404";
+        document.title = "Campaign Dashboard - 404";
     }, []);
 
     return (

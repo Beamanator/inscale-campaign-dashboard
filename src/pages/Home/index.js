@@ -22,6 +22,10 @@ const Home = ({ campaigns, campaignRemove }) => {
     const [data, setData] = useState(campaigns);
 
     useEffect(() => {
+        document.title = "Campaign Dashboard - Home";
+    }, []);
+
+    useEffect(() => {
         setData(campaigns);
     }, [campaigns]);
 
