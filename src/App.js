@@ -15,7 +15,7 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 import { makeStyles } from "@material-ui/styles";
 import styles from "./styles";
 
-function App({ campaignAdd }) {
+export const App = ({ campaignAdd }) => {
     const classes = makeStyles(styles)();
     const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -64,7 +64,7 @@ function App({ campaignAdd }) {
             </main>
         </div>
     );
-}
+};
 
 // const mapStateToProps = (state) => ({});
 const mapDispatchToProps = (dispatch) => ({
