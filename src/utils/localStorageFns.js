@@ -3,7 +3,7 @@ import {
     validateStartBeforeEndDate,
 } from "./campaignFormatFns";
 
-export const storageAvailable = (type) => {
+export const storageAvailable = (type = "localStorage") => {
     var storage;
     try {
         storage = window[type];
@@ -29,22 +29,26 @@ export const storageAvailable = (type) => {
     }
 };
 
-export const getLocalStorageCampaigns = () => {
+export const getLocalStorageCampaigns = (key = "campaigns") => {
     if (storageAvailable("localStorage")) {
-        let campaigns = localStorage.getItem("campaigns");
+        let campaigns = localStorage.getItem(key);
 
         // parse & filter if any campaigns were loaded
         if (campaigns) {
-            // 1. parse json
-            campaigns = JSON.parse(campaigns);
+            try {
+                // 1. parse json
+                campaigns = JSON.parse(campaigns);
 
-            // 2. remove invalid campaigns
-            campaigns = campaigns.filter(validateStartBeforeEndDate);
+                // 2. remove invalid campaigns
+                campaigns = campaigns.filter(validateStartBeforeEndDate);
 
-            // 3. add active status to campaign data
-            campaigns = campaigns.map(addActiveStatusToCampaign);
+                // 3. add active status to campaign data
+                campaigns = campaigns.map(addActiveStatusToCampaign);
 
-            return { campaigns };
+                return { campaigns };
+            } catch (e) {
+                return { err: "Campaign data is not valid JSON" };
+            }
         }
 
         return { campaigns: [] };
