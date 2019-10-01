@@ -19,6 +19,19 @@ const About = () => {
                     </a>{" "}
                     file, just so I'd have some content to put on this page :D
                 </p>
+                <p>
+                    <a
+                        href="https://campaign-dashboard.netlify.com/home"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        campaign-dashboard.netlify.com
+                    </a>{" "}
+                    <img
+                        src="https://api.netlify.com/api/v1/badges/a5a4a29f-0bd7-4ed7-b803-fc9287b6a496/deploy-status"
+                        alt="netlify deployment status"
+                    />
+                </p>
                 <h1>Campaign Dashboard</h1>
                 <p>by The Beamanator</p>
                 <h2>How to filter campaigns in table:</h2>
