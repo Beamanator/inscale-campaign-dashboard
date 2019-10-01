@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter } from "react-router-dom";
-import { render, cleanup } from "@testing-library/react";
+import { cleanup } from "@testing-library/react";
 import { App } from "./App";
 
 // @material-ui imports
