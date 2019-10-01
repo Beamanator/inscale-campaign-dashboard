@@ -29,7 +29,11 @@ const About = () => {
                     </a>{" "}
                     <img
                         src="https://api.netlify.com/api/v1/badges/a5a4a29f-0bd7-4ed7-b803-fc9287b6a496/deploy-status"
-                        alt="netlify deployment status"
+                        alt="netlify deployment status badge"
+                    />
+                    <img
+                        src="https://coveralls.io/repos/github/Beamanator/inscale-campaign-dashboard/badge.svg"
+                        alt="coveralls percentage badge"
                     />
                 </p>
                 <h1>Campaign Dashboard</h1>
