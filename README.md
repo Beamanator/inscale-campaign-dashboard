@@ -1,4 +1,4 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/a5a4a29f-0bd7-4ed7-b803-fc9287b6a496/deploy-status)](https://app.netlify.com/sites/campaign-dashboard/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/a5a4a29f-0bd7-4ed7-b803-fc9287b6a496/deploy-status)](https://app.netlify.com/sites/campaign-dashboard/deploys) [![Coverage Status](https://coveralls.io/repos/github/Beamanator/inscale-campaign-dashboard/badge.svg)](https://coveralls.io/github/Beamanator/inscale-campaign-dashboard)
 
 # Campaign List
 
@@ -12,8 +12,9 @@ by The Beamanator
 To remove filter and see old data, just click 'clear'
 
 **Note to interviewers**: The exact conditions in the prompt only mention:
-- If the campaign has a startDate that is contained in the range, it should show
-- If the campaign has an endDate that is contained in the range, it should show.
+
+-   If the campaign has a startDate that is contained in the range, it should show
+-   If the campaign has an endDate that is contained in the range, it should show.
 
 These two conditions don't cover the condition if some data point has a start date **before** the range _AND_ an end date **after** the range. I think it would make sense to show such data points (in a real application), but I didn't include this condition in this project because I wanted to follow the prompt as closely as possible.
 
