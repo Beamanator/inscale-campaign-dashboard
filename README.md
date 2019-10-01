@@ -2,6 +2,8 @@
 
 by The Beamanator
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/a5a4a29f-0bd7-4ed7-b803-fc9287b6a496/deploy-status)](https://app.netlify.com/sites/campaign-dashboard/deploys)
+
 ## How to filter campaigns in table:
 
 1. Enter a valid start & end date
