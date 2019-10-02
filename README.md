@@ -1,4 +1,4 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/a5a4a29f-0bd7-4ed7-b803-fc9287b6a496/deploy-status)](https://app.netlify.com/sites/campaign-dashboard/deploys) [![Coverage Status](https://coveralls.io/repos/github/Beamanator/inscale-campaign-dashboard/badge.svg)](https://coveralls.io/github/Beamanator/inscale-campaign-dashboard)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/a5a4a29f-0bd7-4ed7-b803-fc9287b6a496/deploy-status)](https://app.netlify.com/sites/campaign-dashboard/deploys) [![Coverage Status](https://coveralls.io/repos/github/Beamanator/inscale-campaign-dashboard/badge.svg)](https://coveralls.io/github/Beamanator/inscale-campaign-dashboard) [![Build Status](https://travis-ci.org/Beamanator/inscale-campaign-dashboard.svg?branch=master)](https://travis-ci.org/Beamanator/inscale-campaign-dashboard)
 
 # Campaign List
 
