@@ -10,19 +10,21 @@ import { createShallow } from "@material-ui/core/test-utils";
 
 let shallow;
 
-beforeEach(() => {
-    shallow = createShallow();
-});
+describe("component", () => {
+    beforeEach(() => {
+        shallow = createShallow();
+    });
 
-afterEach(cleanup);
+    afterEach(cleanup);
 
-it("renders without crashing", () => {
-    const theme = createMuiTheme();
-    shallow(
-        <BrowserRouter>
-            <ThemeProvider theme={theme}>
-                <App />
-            </ThemeProvider>
-        </BrowserRouter>
-    );
+    it("renders without crashing", () => {
+        const theme = createMuiTheme();
+        shallow(
+            <BrowserRouter>
+                <ThemeProvider theme={theme}>
+                    <App />
+                </ThemeProvider>
+            </BrowserRouter>
+        );
+    });
 });
