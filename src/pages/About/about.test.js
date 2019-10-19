@@ -1,3 +1,4 @@
+import "babel-polyfill";
 import React from "react";
 import { cleanup, render, waitForElement } from "@testing-library/react";
 import About from "./index";
