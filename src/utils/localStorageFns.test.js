@@ -69,4 +69,19 @@ describe("utils", () => {
             localStorage.removeItem(testValidStorageKey);
         }
     });
+
+    it("returns error message if local storage not possible in browser", () => {
+        // copy out window's local storage
+        const tempLocalStorage = window["localStorage"];
+
+        // remove window's local storage functionality
+        delete window.localStorage;
+
+        const campaignError = getLocalStorageCampaigns();
+
+        expect(campaignError).toHaveProperty("err");
+
+        // put local storage back in window
+        window["localStorage"] = tempLocalStorage;
+    });
 });
