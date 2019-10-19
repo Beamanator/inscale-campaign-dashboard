@@ -1,10 +1,6 @@
 module.exports = {
     setupFilesAfterEnv: ["./src/setupTests.js"],
     moduleFileExtensions: ["js"],
-    collectCoverageFrom: [
-        "**/*.{js,jsx}",
-        "!**/node_modules/**",
-        "!**/vendor/**",
-    ],
+    collectCoverageFrom: ["src/*.{js,jsx}"],
     verbose: true,
 };
