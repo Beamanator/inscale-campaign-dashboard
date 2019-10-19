@@ -8,7 +8,12 @@ const FilterActions = ({ onClearFilter }) => {
         <Grid container spacing={2}>
             {/* filter */}
             <Grid item>
-                <Button type="submit" variant="contained" color="primary">
+                <Button
+                    type="submit"
+                    variant="contained"
+                    color="primary"
+                    data-testid="filter-campaigns"
+                >
                     Filter
                 </Button>
             </Grid>
@@ -19,6 +24,7 @@ const FilterActions = ({ onClearFilter }) => {
                     onClick={onClearFilter}
                     variant="contained"
                     color="secondary"
+                    data-testid="clear-filter"
                 >
                     Clear
                 </Button>

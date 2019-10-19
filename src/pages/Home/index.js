@@ -17,7 +17,7 @@ import styles from "./styles";
 import { makeStyles } from "@material-ui/styles";
 import DateFilter from "./DateFilter";
 
-const Home = ({ campaigns, campaignRemove }) => {
+export const Home = ({ campaigns, campaignRemove }) => {
     const classes = makeStyles(styles)();
     const [data, setData] = useState(campaigns);
 
@@ -77,7 +77,7 @@ const Home = ({ campaigns, campaignRemove }) => {
         <>
             <DateFilter onFilter={onFilter} onClearFilter={onClearFilter} />
 
-            <div className={classes.groupSpacer} />
+            <div className={classes.groupSpacer} data-testid="spacer" />
 
             <MUIDataTable
                 data={data}

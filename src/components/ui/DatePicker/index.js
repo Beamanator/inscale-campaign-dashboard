@@ -31,6 +31,7 @@ const CustomDatePicker = ({
             value={value}
             TextFieldComponent={() => (
                 <TextValidator
+                    data-testid="date-picker"
                     variant="outlined"
                     label={label}
                     value={moment(value).format("MMM Do, YYYY")}
