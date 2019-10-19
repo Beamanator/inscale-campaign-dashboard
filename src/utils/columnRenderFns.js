@@ -11,6 +11,7 @@ export const activeStatus = (isActive) => (
 export const budgetFormat = (num) => {
     // convert from string to number, if passed in as string
     if (typeof num === "string") num = parseInt(num, 10);
+    if (isNaN(num) || typeof num !== "number") return "Invalid budget";
 
     // set up type of quantifiers
     // -> k = thousand
@@ -27,6 +28,11 @@ export const budgetFormat = (num) => {
     while (Math.floor(num / 1000) > 0) {
         quantIndex++;
         num /= 1000;
+    }
+
+    // handle budget past the trillions
+    if (quantIndex >= quantifiers.length) {
+        return "Budget too large";
     }
 
     // format & get final values

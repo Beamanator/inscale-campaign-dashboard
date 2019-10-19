@@ -14,7 +14,7 @@ const StatusIndicator = ({ isActive }) => {
     return (
         <div className={classes.root}>
             <div className={[classes.circle, circleColorClass].join(" ")} />
-            <div>{text}</div>
+            <div data-testid="status-text">{text}</div>
         </div>
     );
 };
