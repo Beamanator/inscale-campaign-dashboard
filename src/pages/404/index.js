@@ -45,7 +45,11 @@ const Four04 = () => {
                 </Typography>
             </Grid>
             <Grid item>
-                <Link className={classes.backLink} to="/home">
+                <Link
+                    className={classes.backLink}
+                    to="/home"
+                    data-testid="go-home"
+                >
                     Back Home
                 </Link>
             </Grid>

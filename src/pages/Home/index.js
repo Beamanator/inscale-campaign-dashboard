@@ -96,7 +96,6 @@ const Home = ({ campaigns, campaignRemove }) => {
 };
 
 Home.propTypes = {
-    campaigns: PropTypes.array.isRequired,
     campaignRemove: PropTypes.func.isRequired,
 };
 
